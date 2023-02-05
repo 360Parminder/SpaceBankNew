@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="container flex">
+        <div class="main-box flex">
+    <div class="box-left">
+    <h2>Get In Touch</h2>
+    <p>We are here for you! How ca we help?</p>
+    <form onsubmit="sendEmail();" class="inputs">
+        <input id="" type="text" class="input" placeholder="Enter your Name">
+        <input id="email" type="email" class="input" placeholder="Enter your Email address">
+        <textarea id="message" class="input comment" placeholder="Go ahead,We are listening" name="" id="" cols="30" rows="10"></textarea>
+        <button type="submit" class="left-btn">Submit</button>
+    </form>
+    </div>
+    <div class="box-right">
+        <img src="img/Call center-pana.png" alt="">
+
+       <div class="contact">
+        <ion-icon name="location"></ion-icon><a href="https://maps.app.goo.gl/BkNLGHiRfkQo2jaH6">Yaduvanshi bhavan Alwar Rajasthan </a> 
+        <ion-icon name="call"></ion-icon><a href="tel:+918779112732"> 8779112732</a>
+        <ion-icon name="mail"></ion-icon><a href="mailto:yesask8@gmail.com">yesask8@gmail.com</a>
+    </div>     
+   
+
+
+       
+
+</div>
+
+        </div>
+        <div class="social">
+          <a href="https://github.com/STORM992002">  <ion-icon class="git" name="logo-github"></ion-icon></a>
+          <a href="https://www.linkedin.com/in/parminder-singh-storm">  <ion-icon class="linkedin" name="logo-linkedin"></ion-icon></a>
+          <a href="https://instagram.com/_broken__storm_?igshid=YmMyMTA2M2Y=">  <ion-icon class="instagram" name="logo-instagram"></ion-icon></a>
+            
+        </div>
+    </div>
+
+
+
+
+
+<!-- SCRIPT -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "yesask8@gmail.com",
+    Password : "7619366D2FAF6945659059345A2270A58DA1",
+    To : 'yesask8@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "This is the subject",
+    Body : Document.getElementById("message").value,
+}).then(
+  message => alert(message)
+);
+    }
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
